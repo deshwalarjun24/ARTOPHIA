@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .expand-btn {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  font-size: 16px;
+  background: linear-gradient(45deg, #ff4d94, #8c56ff);
+  margin: 50px;;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  border-radius: 5px;
+  gap: 10px;
+  
+}
+
+.arrow {
+  display: inline-block;
+  margin-right: 5px;
+  transition: transform 0.3s ease, width 0.3s ease;
+  width: 15px;
+}
+.expand-btn:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+    background: linear-gradient(45deg, #ff4d94, #8c56ff);
+    transition: all 0.3s ease;
+}
+.expand-btn:hover .arrow {
+  transform: scaleX(8); /* Expand horizontally */
+  width: 100px; /* Expand width */
+ 
+}
+.expand-btn a{
+    text-decoration: none;
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <a href="Artworks.html"><button class="expand-btn">Click Me
+        <span class="arrow">➜</span></a> 
+      </button>
+      
+</body>
+</html>

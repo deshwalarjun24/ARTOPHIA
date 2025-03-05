@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARTOPHIA - Connect with Artists Worldwide</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+  <div id="canvas-container"></div>
+  
+  <header class="navbar">
+    
+    <div class="logo">
+        <img src="Logo.PNG">
+        <h1>ARTOPHIA</h1>
+    </div>
+    
+    <div class="search-container">
+      <input type="text" placeholder="Search artists or artwork...">
+    </div>
+    <nav class="sidebar">
+      <button><i class="fa-solid fa-xmark" style="font-size:30px; cursor: pointer ;" onclick=hideSidebar()></i></button>
+      <a href="#">Home</a>
+      <a href="#">Artists</a>
+      <a href="#">Artworks</a>
+      <a href="#">NFT Gallery</a>
+      <a href="#">Auctions</a>
+      <a href="#">For Businesses</a>
+      <a href="#">About</a>
+   
+    </nav>
+    <nav class="nav-links" >
+      <a href="#">Home</a>
+      <a href="Artist.html">Artists</a>
+      <a href="Artworks.html">Artworks</a>
+      <a href="NFT.html">NFT Gallery</a>
+      <a href="Auctions.html">Auctions</a>
+      <a href="Buisness.html">For Businesses</a>
+      <a href="#">Exhibitions</a>
+      <a href="Login_SignUp/login.html" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">Login</a>
+      <a href="Login_SignUp/SignUp.html" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">Join Now</a>
+      
+    </nav>
+    <button class="mobile-menu-btn" onclick=showSidebar()>☰</button>
+
+      
+  </header>
+  
+  
+ 
+  
+<div class="hero_Sec">
+  <section class="hero">
+    <h1 class="fade-in">Connect with Artists Near You</h1>
+    <p class="fade-in delay-1">Discover and hire talented artists within your area or browse artwork from around the world. ARTOPHIA brings art creators and clients together in a revolutionary platform.</p>
+    <div class="cta-buttons fade-in delay-2">
+      <a href="Login_SignUp/SignUp.html"><button class="btn btn-primary">Join as an Artist</button></a>
+      <a href="Artist.html"><button class="btn btn-secondary">Find an Artist</button></a>
+    </div>
+</section>
+<img src="ArtClients.PNG" alt="">
+</div>
+  
+  
+  
+  <section class="section section-alt">
+    <div class="section-heading">
+      <h2>How ARTOPHIA Works</h2>
+      <p>Our platform connects artists with potential clients through a simple, streamlined process</p>
+    </div>
+    
+    <div class="how-it-works-container">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <h3>Create Your Profile</h3>
+        <p>Artists build portfolios showcasing their work. Clients create accounts to discover talent.</p>
+      </div>
+      
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <h3>Connect Locally or Globally</h3>
+        <p>Find artists within a 5-10km radius or explore artwork from around the world.</p>
+      </div>
+      
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <h3>Collaborate Seamlessly</h3>
+        <p>Chat directly, hire artists, purchase artwork, or request custom pieces all in one platform.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+        <div class="section-title">
+            <h2>Core Features</h2>
+            <p>Discover what makes ARTOPHIA the perfect platform for connecting artists and clients</p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-map-marker-alt" style="color:#FFD43B"></i>
+                </div>
+                <h4>Local Discovery</h4>
+                <p>Find artists within 5-10km radius, perfect for projects requiring local talent or quick turnaround.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-comments"style="color:#FFD43B"></i>
+                </div>
+                <h4>Real-time Chat</h4>
+                <p>Communicate directly with artists or clients through our secure messaging system.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-palette"style="color:#FFD43B"></i>
+                </div>
+                <h4>Portfolio Showcase</h4>
+                <p>Artists can showcase their best work with detailed portfolios and skill tagging.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-handshake"style="color:#FFD43B;"></i>
+                </div>
+                <h4>Instant Hiring</h4>
+                <p>Secure payment system for smooth hiring process between artists and clients.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-certificate"style="color: #FFD43B;"></i>
+                </div>
+                <h4>Verification Badge</h4>
+                <p>Trust badge for verified artists with proven track record and quality work.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-users"style="color:#FFD43B;"></i>
+                </div>
+                <h4>Collaboration Hub</h4>
+                <p>Connect with other artists for collaborations and joint projects.</p>
+            </div>
+        </div>
+    </div>
+</section>
+  <section class="section">
+    <div class="section-heading">
+      <h2>For Everyone in the Art World</h2>
+      <p>ARTOPHIA serves different user needs with specialized features</p>
+    </div>
+    
+    <div class="user-types">
+      <div class="user-type-card">
+        <div class="user-type-icon"><i class="fa-solid fa-palette" style="color: #FFD43B;"></i></div>
+        <h3>For Artists</h3>
+        <div class="card-body">
+            <ul>
+                <li>Create professional portfolios</li>
+                <li>Get discovered by local clients</li>
+                <li>Set your availability status</li>
+                <li>Receive direct hiring requests</li>
+                <li>Collaborate with other artists</li>
+                <li>Build your reputation with reviews</li>
+            </ul>
+           
+        </div>
+        <a href="Login_SignUp/SignUp.html#artist-type"><button class="btn btn-primary" > <i class="fa-solid fa-person-walking-arrow-right" style="color:black; font-size:30px;"></i></button></a>
+      </div>
+      
+      <div class="user-type-card">
+        <div class="user-type-icon"><i class="fa-solid fa-person-dress" style="color: #FFD43B;"></i></div>
+        <h3>For Individuals</h3>
+        <div class="card-body">
+            <ul>
+                <li>Find local creative talent</li>
+                <li>Browse portfolios and reviews</li>
+                <li>Chat with artists in real-time</li>
+                <li>Hire securely through the platform</li>
+                <li>Save favorite artists for future</li>
+                <li>Rate and review completed work</li>
+            </ul>
+            
+        </div>
+        <a href="Login_SignUp/SignUp.html#individual-type"> <button class="btn btn-primary" > <i class="fa-solid fa-person-walking-arrow-right" style="color:black; font-size:30px;"></i></button></a>
+      </div>
+      
+      <div class="user-type-card">
+        <div class="user-type-icon"><i class="fa-solid fa-building-user fa-beat-fade" style="color: #FFD43B; font-size: 40px;"></i></div>
+        <h3>For Businesses</h3>
+        <div class="card-body">
+            <ul>
+                <li>Create a business profile</li>
+                <li>Hire multiple artists for projects</li>
+                <li>Access premium search features</li>
+                <li>Manage multiple creative projects</li>
+                <li>Business verification badge</li>
+                <li>Exclusive hiring tools</li>
+            </ul>
+            
+    </div>
+    <a href="Login_SignUp/SignUp.html#business-type"><button class="btn btn-primary"><i class="fa-solid fa-person-walking-arrow-right" style="color:black; font-size:30px;"></i></button></a>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section section-alt">
+    <div class="section-heading">
+      <h2>Featured Artworks</h2>
+      <p>Explore the latest creations from our talented artist community</p>
+    </div>
+    
+    <div class="artwork-grid">
+      <div class="artwork-card">
+        <img class="artwork-img" src="/api/placeholder/400/400" alt="Artwork">
+        <div class="artwork-info">
+          <h4>Cosmic Dreams</h4>
+          <p>Digital Art</p>
+          <div class="artist-profile">
+            <img class="artist-avatar" src="/api/placeholder/50/50" alt="Artist">
+            <span>Alex Rivera</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="artwork-card">
+        <img class="artwork-img" src="/api/placeholder/400/400" alt="Artwork">
+        <div class="artwork-info">
+          <h4>Urban Reflections</h4>
+          <p>Photography</p>
+          <div class="artist-profile">
+            <img class="artist-avatar" src="/api/placeholder/50/50" alt="Artist">
+            <span>Maya Johnson</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="artwork-card">
+        <img class="artwork-img" src="/api/placeholder/400/400" alt="Artwork">
+        <div class="artwork-info">
+          <h4>Ethereal Landscapes</h4>
+          <p>Oil Painting</p>
+          <div class="artist-profile">
+            <img class="artist-avatar" src="/api/placeholder/50/50" alt="Artist">
+            <span>David Chen</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="artwork-card">
+        <img class="artwork-img" src="/api/placeholder/400/400" alt="Artwork">
+        <div class="artwork-info">
+          <h4>Neon Memories</h4>
+          <p>NFT Collection</p>
+          <div class="artist-profile">
+            <img class="artist-avatar" src="/api/placeholder/50/50" alt="Artist">
+            <span>Sasha Williams</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="artwork-card">
+        <img class="artwork-img" src="/api/placeholder/400/400" alt="Artwork">
+        <div class="artwork-info">
+          <h4>Abstract Emotions</h4>
+          <p>Acrylic on Canvas</p>
+          <div class="artist-profile">
+            <img class="artist-avatar" src="/api/placeholder/50/50" alt="Artist">
+            <span>Jordan Lee</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="artwork-card">
+        <img class="artwork-img" src="/api/placeholder/400/400" alt="Artwork">
+        <div class="artwork-info">
+          <h4>Sculptural Harmony</h4>
+          <p>Bronze Sculpture</p>
+          <div class="artist-profile">
+            <img class="artist-avatar" src="/api/placeholder/50/50" alt="Artist">
+          </div>
+        </div>
+      </div>
+      
+      <div class="explore-button">
+        <button class="Explore" onclick=Explore()><i class="fa-solid fa-person-walking-arrow-right" style="color:black; font-size:50px;"></i></button>
+      </div>
+        </section>   
+
+
+    
+    <section class="cta">
+        <div class="container">
+            <h3>Ready to Transform How Art Connects Us?</h3>
+            <p>Join ARTOPHIA today and become part of a growing community of artists and clients. Discover local talent or showcase your work to those who need it most.</p>
+            <a href="#" class="btn btn-light">Get Started Now</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h5>ARTOPHIA</h5>
+                    <p>Connecting artists with clients in real-time, making creative collaboration easier than ever before.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h5>Platform</h5>
+                    <ul>
+                        <li><a href="#">For Artists</a></li>
+                        <li><a href="#">For Clients</a></li>
+                        <li><a href="#">For Businesses</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 ARTOPHIA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+   
+\<script src="index.js"></script>
+
+</body>
+</html>

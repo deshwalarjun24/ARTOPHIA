@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artworks - ARTOPHIA</title>
+    <link rel="stylesheet" href="global-styles.css">
+    <style>
+        .artworks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .artwork-card {
+            background: rgba(30, 30, 30, 0.5);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .artwork-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .artwork-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .artwork-details {
+            padding: 1rem;
+        }
+
+        .artwork-price {
+            color: #8c56ff;
+            font-weight: bold;
+        }
+
+        .filter-section {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(45deg, #ff4d94, #8c56ff);
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <!-- Navbar from Homepage (same code) -->
+    </header>
+
+    <main class="page-content">
+        <section class="section">
+            <div class="section-heading">
+                <h2>Explore Artworks</h2>
+                <p>Browse unique artworks from talented artists around the world</p>
+            </div>
+
+            <div class="filter-section">
+                <button class="filter-btn active" data-filter="all">All Artworks</button>
+                <button class="filter-btn" data-filter="digital">Digital Art</button>
+                <button class="filter-btn" data-filter="photography">Photography</button>
+                <button class="filter-btn" data-filter="painting">Painting</button>
+            </div>
+
+            <div class="artworks-grid" id="artworksGrid">
+                <!-- Artworks will be dynamically loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer from Homepage (same code) -->
+    </footer>
+
+    <script>
+        const artworks = [
+            {
+                title: "Cosmic Dreams",
+                artist: "Alex Rivera",
+                price: "$499",
+                image: "/api/placeholder/400/400",
+                category: "digital"
+            },
+            {
+                title: "Urban Landscape",
+                artist: "Maya Johnson",
+                price: "$799",
+                image: "/api/placeholder/400/400",
+                category: "photography"
+            },
+            // Add more artworks
+        ];
+
+        function renderArtworks(filter = 'all') {
+            const grid = document.getElementById('artworksGrid');
+            grid.innerHTML = '';
+
+            const filteredArtworks = filter === 'all' 
+                ? artworks 
+                : artworks.filter(artwork => artwork.category === filter);
+
+            filteredArtworks.forEach(artwork => {
+                const card = document.createElement('div');
+                card.classList.add('artwork-card');
+                card.innerHTML = `
+                    <img src="${artwork.image}" alt="${artwork.title}" class="artwork-image">
+                    <div class="artwork-details">
+                        <h3>${artwork.title}</h3>
+                        <p>By ${artwork.artist}</p>
+                        <p class="artwork-price">${artwork.price}</p>
+                        <button class="btn btn-primary">Buy Artwork</button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                renderArtworks(btn.dataset.filter);
+            });
+        });
+`       
+        // Initial render
+        renderArtworks();
+    </script>
+</body>
+</html>
